@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joren Ancajas - Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        h1, h2, p {
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Smooth transition */
+        .transition-section {
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .transition-section.active {
+            opacity: 1;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #333;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            background-color: #1d1d1d;
+            color: #fff;
+        }
+
+        .hero img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        /* About Me Section */
+        .about-me {
+            background-color: #f9f9f9;
+            padding: 40px 0;
+        }
+
+        .about-me p {
+            font-size: 18px;
+        }
+
+        /* Family Section */
+        .family-section {
+            background-color: #ffffff;
+            padding: 40px 0;
+        }
+
+        .family-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .family-member img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        /* Resumé Section */
+        .resume {
+            background-color: #e6e6e6;
+            padding: 40px 0;
+        }
+
+        .resume ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .resume ul li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        /* My Favorite Section */
+        .favorites {
+            background-color: #f4f4f4;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .favorites img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 15px 30px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#about" onclick="showSection('about')">About Me</a></li>
+            <li><a href="#family" onclick="showSection('family')">My Family</a></li>
+            <li><a href="#resume" onclick="showSection('resume')">Resumé</a></li>
+            <li><a href="#favorites" onclick="showSection('favorites')">My Favorite</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero transition-section" id="home">
+        <div>
+            <img src="https://assets.onecompiler.app/436mmasjq/436mnexp9/JorenImage.jpeg" alt="Joren Ancajas">
+            <h1>Hi! Welcome to my Personal Website!</h1>
+            <p>Do you want to know more about me? You can check this out!</p>
+            <button class="btn" onclick="showSection('about')">About Me</button>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-me transition-section" id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a 19-year-old student from Villa de Primarosa, Barangay Buhay na Tubig, Imus, Cavite. I am currently studying Computer Science at Cavite State University - Imus Campus. I have a passion for technology and I am eager to pursue a career in the tech industry.</p>
+        </div>
+    </section>
+
+    <!-- Family Section -->
+    <section class="family-section transition-section" id="family">
+        <div class="container">
+            <h2>My Family</h2>
+            <div class="family-member">
+                <img src="https://assets.onecompiler.app/436mmasjq/436mnexp9/papaq.jpg" alt="Father">
+                <div>
+                    <h3>Joel Ancajas</h3>
+                    <p>This is my Father, he lives too far from us but his love can still be felt as he is nearby us.</p>
+                </div>
+            </div>
+            <div class="family-member">
+                <img src="https://assets.onecompiler.app/436mmasjq/436mnexp9/mamaq.jpg" alt="Mother">
+                <div>
+                    <h3>Rosemari Ancajas</h3>
+                    <p>My all-in-one Supermom, she loves us, and she would sacrifice everything for our sake.</p>
+                </div>
+            </div>
+            <div class="family-member">
+                <img src="https://assets.onecompiler.app/436mmasjq/436mnexp9/siblings.jpg" alt="Siblings">
+                <div>
+                    <h3>Rench and Roan Ancajas</h3>
+                    <p>My two best friends in life, they are my superheroes, and although they can be my enemies, they are the ones who save me every time I struggle emotionally and physically. I love my family so much.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resumé Section -->
+    <section class="resume transition-section" id="resume">
+        <div class="container">
+            <h2>My Resumé</h2>
+            <ul>
+                <li><strong>Name:</strong> Joren-Mar F. Ancajas</li>
+                <li><strong>Birthdate:</strong> April 05, 2005</li>
+                <li><strong>Birthplace:</strong> Irosin, Sorsogon</li>
+                <li><strong>Sex:</strong> Male</li>
+                <li><strong>Age:</strong> 19</li>
+                <li><strong>Eye Color:</strong> Brown</li>
+                <li><strong>Language:</strong> English and Tagalog</li>
+<li><strong>Nationality:</strong> Filipino</li>
+            </ul>
+            <h3>Contacts</h3>
+            <ul>
+                <li><strong>Phone:</strong> 09560786997</li>
+                <li><strong>Facebook:</strong> Joren-Mar Ancajas</li>
+                <li><strong>Email:</strong> ancajasjoren@gmail.com</li>
+            </ul>
+            <h3>Education Background</h3>
+            <ul>
+                <li><strong>Tertiary:</strong> Cavite State University - Imus Campus (2023-Present)</li>
+                <li><strong>Secondary:</strong> Southern Philippines Institute of Science and Technology (2021-2023), Imus National High School (2019-2021), Gallanosa National High School (2017-2019)</li>
+                <li><strong>Primary:</strong> Carriedo Elementary School (2010-2017)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- My Favorite Section -->
+    <section class="favorites transition-section" id="favorites">
+        <div class="container">
+            <h2>My Favorite Things</h2>
+            <div class="favorite-item">
+                <img src="https://assets.onecompiler.app/436mmasjq/436mnexp9/Shure_mikrofon_55S.jpg" alt="Singing/Dancing">
+                <p>Things to Do: Singing or Dancing</p>
+            </div>
+            <div class="favorite-item">
+                <img src="https://assets.onecompiler.app/436mmasjq/436mnexp9/images.webp" alt="Sinigang">
+                <p>Food: Sinigang</p>
+            </div>
+            <div class="favorite-item">
+                <img src="https://assets.onecompiler.app/436mmasjq/436mnexp9/Picsart_25-01-20_21-20-48-733.jpg" alt="Kpop">
+                <p>Kpop Artists: BLACKPINK & TWICE</p>
+            </div>
+            <div class="favorite-item">
+                <img src="https://assets.onecompiler.app/436mmasjq/436mnexp9/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvNjdhNjc3MDMtMThlNS00MTdmLWI5MGYtNjFkMjViZjJlZmFkLmpwZw==.jpg" alt="Squid Game">
+                <p>Movie: Squid Game</p>
+            </div>
+            <div class="favorite-item">
+                <p>Color: Black 🖤</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('.transition-section');
+            sections.forEach(section => section.classList.remove('active'));
+            const section = document.getElementById(id);
+            section.classList.add('active');
+        }
+
+        // Initialize the first section
+        showSection('home');
+    </script>
+</body>
+
+</html>
